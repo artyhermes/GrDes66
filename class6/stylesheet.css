@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+a {
+	font-size: 80px;
+	text-decoration: none;
+	color: inherit;
+	text-transform: lowercase;
+	text-shadow: 2px 10px 10px purple;
+	text-orientation: sideways;}
+
+.image-holder {
+	background-image: url(img/world.jpeg);
+	height: 500px;
+	background-repeat: no-repeat;
+	background-color: aquamarine;
+	background-position: center;
+	background-size: cover;
+	box-shadow: (4px 4px 5px grey);
+}
