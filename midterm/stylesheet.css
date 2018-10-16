@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* CSS Document */
+
+main {
+	margin-top: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav a {
+    float: left;
+    display: inline;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: plum;
+}
+
+div.gallery {
+	position: relative;
+}
+
+div.gallery img { 
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.responsive {
+    display: inline-block;
+	padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+h1, h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-align: center;
+	margin-top: 80px;
+	letter-spacing: 2px;
+	background-color: plum;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	line-height: 20px;
+	font-size: 20px;
+}
+
+@media screen and (max-width:700px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 100%;
+    }
+}
