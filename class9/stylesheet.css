@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    background-color: aliceblue;
+    display: inline-block;
+}
+
+h1 {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	text-align: right;
+}
+
+.button-container {
+    background-color: lightsteelblue;
+    padding: 5px;
+    text-align: right;
+}
+p {
+   background-color: navajowhite;
+   margin-top: 15px;
+   margin-bottom: 15px
+}
+
+.time {
+	background-color:#C5999A;
+	font-size: 20px;
+}
+.text {
+	background-color: #C5999A;
+	font-size: 20px;
+}

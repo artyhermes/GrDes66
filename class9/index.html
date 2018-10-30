@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 9</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+<div class="button-container">
+  <button class="text" onclick="changeMyText()">Change Text</button>
+  <button class="text" onclick="changeMyColor()">Change Color</button>
+</div>
+<h1 id="docHeader">Goodbye, Sky!</h1>
+<p>What will you dress up as for Halloween?</p>
+<p id="halloween" onclick="myFunction()">Click me, I dare you.</p>
+<button class="time" onclick="this.innerHTML=Date()">который сейчас час</button>
+
+<script>
+	var docHeader = document.getElementById("docHeader");
+	
+	var changeMyText = function(){
+		var myText = "Hello, World!";
+		docHeader.innerHTML = myText;
+	}
+	
+	var changeMyColor = function(){
+		var red = Math.random()*255;
+		var green = Math.random()*255;
+		var blue = Math.random()*255;
+		var RGBval = "rgb(" + red + ", " + green + ", " + blue + ")";
+		docHeader.style.color = RGBval;
+	}
+	
+//	var myTextSize = Math.random()*100;
+//	
+//	console.log(docHeader);
+//	
+//	docHeader.style.fontSize = myTextSize + "px";
+	
+	function myFunction() {
+    document.getElementById("halloween").innerHTML = "Happy Halloween!";
+}
+	
+document.getElementById("docHeader").style.color = "#4CAF50";
+document.getElementById("halloween").style.color = "#C5999A";
+document.getElementById("halloween").style.fontFamily = "monospace";
+document.getElementById("halloween").style.fontSize = "xx-large";
+	
+</script>
+</body>
+</html>
