@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#container.rotate90, #container.rotate270 {
+    width: 100px;
+    height: 820px;
+}
+#image {
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+}
+#container.rotate90 #image {
+    transform: rotate(90deg) translateY(-100%);
+    -webkit-transform: rotate(90deg) translateY(-100%);
+    -ms-transform: rotate(90deg) translateY(-100%);
+}
+#container.rotate180 #image {
+    transform: rotate(180deg) translate(-100%, -100%);
+    -webkit-transform: rotate(180deg) translate(-100%, -100%);
+    -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#container.rotate270 #image {
+    transform: rotate(270deg) translateX(-100%);
+    -webkit-transform: rotate(270deg) translateX(-100%);
+    -ms-transform: rotate(270deg) translateX(-100%);
+}
+#container-move {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: #46468F;
+}
+#animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #944647;
+}

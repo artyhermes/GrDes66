@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 10</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<style>
+#message {
+    color: red;
+}
+</style>
+</head>
+<body>
+<h1 id="docHeader">Hello, World!</h1>
+<div class="button-container">
+  <button onClick="showHeader()" id="showButton">Show Header!</button>
+  <button onClick="hideHeader()" id="hideButton">Hide Header!</button>
+</div>
+<p id="message"></p>
+<button id="button">Rotate image</button>
+<div id="container"> <img src="img/cans.jpg" id="image"/> </div>
+<div> <img onmouseover="fifo()" on mouseleave="fifo()" src="img/cans.jpg" id="cans" alt="sequence of cans"/> </div>
+<p>
+  <button onclick="myMove()">Move that red square!</button>
+</p>
+<div id ="container-move">
+  <div id ="animate"></div>
+</div>
+<script>
+	
+		var header = document.getElementById("docHeader");
+		
+		function showHeader(){
+			document.getElementById("message").innerText = "";
+			document.getElementById("hideButton").removeAttribute("disabled");
+			
+			if(header.style.visibility === "visible"){
+				document.getElementById("showButton").setAttribute("disabled, disabled")
+				document.getElementById("message").innerText = "The header is already shown!";
+			}
+		header.style.visibility = "visible";
+		}
+		
+		function hideHeader(){
+				document.getElementById("message").innerText = "";
+				document.getElementById("showButton").removeAttribute("disabled");
+			
+				if(header.style.visibility === "hidden"){
+					document.getElementById("hideButton").setAttribute("disabled", "disabled");
+					document.getElementById("message").innerText = "The header is already hidden!";
+				}
+			header.style.visibility = "hidden";
+			}
+	
+	var angle = 0,
+		img = document.getElementById('container');
+	document.getElementById('button').onclick = function () {
+		angle = (angle + 90) % 360;
+		img.className = "rotate" + angle;
+	}
+	var b=0;
+	function fifo(){
+		if(b==0){
+			document.getElementById("cans").width = "600";
+			b=1;
+		}
+		else {
+			document.getElementById("cans").width = "300";
+			b=0;
+		}
+	}
+	function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+	</script>
+</body>
+</html>
