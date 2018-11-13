@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Assignment 10</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
+  <style>
+div {
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 300px;
+}
+</style>
+  </head>
+  <body>
+<h1 id="docHeader">Hello, World!</h1>
+<div class="button-container">
+    <button onClick="showHeader()" id="showButton">Show Header!</button>
+    <button onClick="hideHeader()" id="hideButton">Hide Header!</button>
+  </div>
+<p id="message"></p>
+<h1>Header 1</h1>
+<p>Contents 1</p>
+<h2>Header 2</h2>
+<p>Contents 2</p>
+<div>Click here</div>
+<div>to iterate through</div>
+<div>these divs.</div>
+<script>
+		var header = document.getElementById("docHeader");
+		
+		function showHeader(){
+			document.getElementById("message").innerText = "";
+			document.getElementById("hideButton").removeAttribute("disabled");
+			
+			if(header.style.visibility === "visible"){
+				document.getElementById("showButton").setAttribute("disabled, disabled")
+				document.getElementById("message").innerText = "The header is already shown!";
+			}
+		header.style.visibility = "visible";
+		}
+		
+		function hideHeader(){
+				document.getElementById("message").innerText = "";
+				document.getElementById("showButton").removeAttribute("disabled");
+			
+				if(header.style.visibility === "hidden"){
+					document.getElementById("hideButton").setAttribute("disabled", "disabled");
+					document.getElementById("message").innerText = "The header is already hidden!";
+				}
+			header.style.visibility = "hidden";
+			}
+		$( ":header" ).css({ background: "#ccc", color: "blue" });
+	$( document.body ).click(function() {
+  $( "div" ).each(function( i ) {
+    if ( this.style.color !== "blue" ) {
+      this.style.color = "blue";
+    } else {
+      this.style.color = "";
+    }
+  });
+});
+</script>
+</body>
+</html>
