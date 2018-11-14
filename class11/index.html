@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Assignment 10</title>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
-  <style>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Assignment 10</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
+<style>
 div {
     color: red;
     text-align: center;
@@ -15,14 +15,31 @@ div {
     font-weight: bolder;
     width: 300px;
 }
+p {
+    background: #dad;
+    font-weight: bold;
+    font-size: 16px;
+}
+p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.blue {
+    color: blue;
+}
+.highlight {
+    background: yellow;
+}
 </style>
-  </head>
-  <body>
+</head>
+<body>
 <h1 id="docHeader">Hello, World!</h1>
 <div class="button-container">
-    <button onClick="showHeader()" id="showButton">Show Header!</button>
-    <button onClick="hideHeader()" id="hideButton">Hide Header!</button>
-  </div>
+  <button onClick="showHeader()" id="showButton">Show Header!</button>
+  <button onClick="hideHeader()" id="hideButton">Hide Header!</button>
+</div>
 <p id="message"></p>
 <h1>Header 1</h1>
 <p>Contents 1</p>
@@ -31,6 +48,16 @@ div {
 <div>Click here</div>
 <div>to iterate through</div>
 <div>these divs.</div>
+<button>Toggle</button>
+<p>Hello</p>
+<p style="display: none">Good Bye</p>
+<button>Toggle 'em</button>
+<p>Hiya</p>
+<p>Such interesting text, eh?</p>
+<p class="blue">Click to toggle</p>
+<p class="blue highlight">highlight</p>
+<p class="blue">on these</p>
+<p class="blue">paragraphs</p>
 <script>
 		var header = document.getElementById("docHeader");
 		
@@ -64,6 +91,15 @@ div {
       this.style.color = "";
     }
   });
+});
+	$( "button" ).click(function() {
+  $( "p" ).toggle();
+});
+	$( "button" ).click(function() {
+  $( "p" ).toggle( "slow" );
+});
+	$( "p" ).click(function() {
+  $( this ).toggleClass( "highlight" );
 });
 </script>
 </body>
