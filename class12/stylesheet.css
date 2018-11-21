@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* CSS Document */
+
+div.gallery img {
+  	height: 200px;
+  	width: 100%;
+  	object-fit: cover;
+}
+
+.gallery {
+    display: inline-block;
+    float: left;
+    width: 33%;
+}
