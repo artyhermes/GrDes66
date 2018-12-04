@@ -4,13 +4,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Assignment 11</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div class="all">
-		<div class="gallery"> <img src="img/models.png" alt="models"></div> 
+	<div class="responsive">
+		<div class="gallery"> <img src="img/models.png" alt="models"></div>
+		<button class="hideImg">Hide this image</button>
 		<div class="gallery"> <img src="img/diagonal.png" alt="diagonal"></div>
 		<div class="gallery"> <img src="img/diagonal2.png" alt="diagonal2"></div>
 		<div class="gallery"> <img src="img/ce.png" alt="contentiousequilibrium"></div>
@@ -25,7 +26,7 @@
   		<button onClick="hideHeader()" id="hideButton">Hide Header!</button>
 	</div>
 <script>
-	var header = document.getElementById("docHeader");
+	$(var header = document.getElementById("docHeader");
 		
 		function showHeader(){
 			document.getElementById("message").innerText = "";

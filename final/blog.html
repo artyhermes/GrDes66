@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Survival International</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+<nav class="navbar"> <span class="navbar-toggle" id="js-navbar-toggle"> <i class="fas fa-bars"></i> </span> <a href="index.html" class="logo">Survival International</a>
+  <ul class="main-nav" id="js-menu">
+    <li> <a href="about.html" class="nav-links">About Us</a></li>
+    <li> <a href="donate.html" class="nav-links">Donate</a> </li>
+    <li> <a href="blog.html" class="nav-links">Blog</a> </li>
+  </ul>
+</nav>
+	
+<div class="blog">
+	<div class="row">
+		<div class="leftcolumn">
+      		<div class="card">
+        		<h1>Sentinelese</h1>
+		  		<h2>12/03/2018</h2>
+		  		<div class="img"><img src="img/sentinelese.jpeg" alt="sentinelese"></div>
+        		<p>The Sentinelese are an uncontacted tribe living on North Sentinel Island, one of the Andaman Islands in the Indian Ocean. They vigorously reject all contact with outsiders. Survival International lobbies, protests and uses public pressure to ensure their wish to remain uncontacted is respected. If not, the entire tribe could be wiped out by diseases to which they have no immunity. The Sentinelese are the most isolated tribe in the world, and have captured the imagination of millions. They live on their own small forested island called North Sentinel, which is approximately the size of Manhattan. They continue to resist all contact with outsiders, attacking anyone who comes near.</p>
+      		</div>
+      		<div class="card">
+		  		<h1>Awá</h1>
+		  		<h2>12/02/2018</h2>
+		  		<div class="img"><img src="img/awa.jpg" alt="awa"></div>
+		  		<p>The most vulnerable tribe on Earth</p>
+        		<p>Despite their extreme self-sufficiency, the uncontacted people are also uniquely vulnerable. The common cold could kill an entire group, and, if they run into illegal loggers, their bows and arrows will be no match for the invaders’ guns. The Awá who live without any contact with outsiders are some of the last uncontacted people on the planet. As nomads, they carry the things they need with them as they move: bows and arrows, children, pets. Everything comes from the forest: the baskets made from palm leaves, the loops of vine used to climb trees, and the tree resin burned to provide light.</p>
+      		</div>
+      		<div class="card">
+		  		<h1>'Pygmies'</h1>
+		  		<h2>12/01/2018</h2>
+		  		<div class="img"><img src="img/pygmies.jpg" alt="pygmies"></div>
+        		<p>Displacement and discrimination devastating forest dwellers across the forests of central Africa, forest peoples have lived by hunting and gathering for millennia. But in the past few decades their homelands have been devastated by logging, war and encroachment from farmers. With expansion of protected areas in response to these problems, their livelihoods have become increasingly impossible and their strong ties to their forests are under strain.</p>
+      		</div>
+    	</div>
+	</div>
+</div>
+	
+<script>
+		let mainNav = document.getElementById('js-menu');
+		let navBarToggle = document.getElementById('js-navbar-toggle');
+
+		navBarToggle.addEventListener('click', function () {
+    
+    	mainNav.classList.toggle('active');
+		});
+	
+	</script>
+</body>
+</html>
