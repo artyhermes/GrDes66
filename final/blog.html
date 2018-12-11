@@ -9,15 +9,14 @@
 </head>
 
 <body>
-<nav class="navbar"><span class="navbar-toggle" id="js-navbar-toggle"> <em class="fas fa-bars"></em></span> 
-	<a href="index.html" class="logo">Survival International</a>
-  	<ul class="main-nav" id="js-menu">
+<nav class="navbar"><span class="navbar-toggle" id="js-navbar-toggle"> <em class="fas fa-bars"></em></span> <a href="index.html" class="logo">Survival International</a>
+  <ul class="main-nav" id="js-menu">
     <li> <a href="about.html" class="nav-links">About Us</a></li>
     <li> <a href="donate.html" class="nav-links">Donate</a> </li>
     <li> <a href="blog.html" class="nav-links">Blog</a> </li>
   </ul>
 </nav>
-<h2>The Survival Blog</h2>
+<h3>The Survival Blog</h3>
 <div class="row">
   <div class="column">
     <div class="card"> <img src="img/sentinelese.jpeg" alt="sentinelese" style="width:100%">
@@ -48,6 +47,16 @@
     </div>
   </div>
 </div>
+	<footer>
+  <div class="footer-container">
+    <div class="footer-logo">Survival International</div>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Join the movement by submitting your email address:
+      <input type="text" name="email">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</footer>
 <script>
 		let mainNav = document.getElementById('js-menu');
 		let navBarToggle = document.getElementById('js-navbar-toggle');
@@ -57,6 +66,14 @@
     	mainNav.classList.toggle('active');
 		});
 	
-	</script>
+	function validateForm() {
+  		var x = document.forms["myForm"]["email"].value;
+  		if (x == "") {
+    	alert("Please enter your email address to join Survival International newsletter. Thank you.");
+    	return false;
+  }
+}
+	
+</script>
 </body>
 </html>

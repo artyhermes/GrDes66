@@ -9,24 +9,29 @@
 </head>
 
 <body>
-<nav class="navbar"> <span class="navbar-toggle" id="js-navbar-toggle"> <i class="fas fa-bars"></i> </span> <a href="index.html" class="logo">Survival International</a>
+<nav class="navbar"><span class="navbar-toggle" id="js-navbar-toggle"> <em class="fas fa-bars"></em></span> <a href="index.html" class="logo">Survival International</a>
   <ul class="main-nav" id="js-menu">
     <li> <a href="about.html" class="nav-links">About Us</a></li>
     <li> <a href="donate.html" class="nav-links">Donate</a> </li>
     <li> <a href="blog.html" class="nav-links">Blog</a> </li>
   </ul>
 </nav>
-	
+<div class="map-container"> <img src="img/survival50.jpg" alt="tribes"> <a class="btn" href="donate.html">Donate</a> </div>
 <div class="container">
   <h2>We are Survival, the global movement for tribal peoples' rights</h2>
   <h3>We’re the only organization that champions tribal peoples around the world. We help them defend their lives, protect their lands and determine their own futures.</h3>
   <h3>Industrialized societies subject tribal peoples to genocidal violence, slavery and racism so they can steal their lands, resources and labour in the name of "progress" and "civilization."</h3>
 </div>
-<div class="container">
-	<img src="img/survival50.png" alt="tribes">
-	<h2>This map represents a small portion of the listed tribes in need of your help.</h2>
-</div>
-	
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">Survival International</div>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Join the movement by submitting your email address:
+      <input type="text" name="email">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</footer>
 <script>
 		let mainNav = document.getElementById('js-menu');
 		let navBarToggle = document.getElementById('js-navbar-toggle');
@@ -35,6 +40,14 @@
     
     	mainNav.classList.toggle('active');
 		});
+	
+		function validateForm() {
+  		var x = document.forms["myForm"]["email"].value;
+  		if (x == "") {
+    	alert("Please enter your email address to join Survival International newsletter. Thank you.");
+    	return false;
+  }
+}
 	
 </script>
 </body>

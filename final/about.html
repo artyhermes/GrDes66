@@ -26,6 +26,16 @@
   <h3>Our Story</h3>
   <h4>Founded in 1969 in response to the genocide of Brazilian Indians, we’ve grown into a movement of supporters in over 100 countries around the world. Our offices are in Berlin, London, Madrid, Milan, Paris and San Francisco. </h4>
 </div>
+	<footer>
+  <div class="footer-container">
+    <div class="footer-logo">Survival International</div>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Join the movement by submitting your email address:
+      <input type="text" name="email">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</footer>
 <script>
 		let mainNav = document.getElementById('js-menu');
 		let navBarToggle = document.getElementById('js-navbar-toggle');
@@ -34,6 +44,14 @@
     
     	mainNav.classList.toggle('active');
 		});
+	
+	function validateForm() {
+  		var x = document.forms["myForm"]["email"].value;
+  		if (x == "") {
+    	alert("Please enter your email address to join Survival International newsletter. Thank you.");
+    	return false;
+  }
+}
 	
 	</script>
 </body>

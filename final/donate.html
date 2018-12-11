@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<nav class="navbar"> <span class="navbar-toggle" id="js-navbar-toggle"> <i class="fas fa-bars"></i> </span> <a href="index.html" class="logo">Survival International</a>
+<nav class="navbar"><span class="navbar-toggle" id="js-navbar-toggle"> <em class="fas fa-bars"></em></span> <a href="index.html" class="logo">Survival International</a>
   <ul class="main-nav" id="js-menu">
     <li> <a href="about.html" class="nav-links">About Us</a></li>
     <li> <a href="donate.html" class="nav-links">Donate</a> </li>
@@ -20,74 +20,94 @@
   <h3>Give</h3>
   <h4>Survival accepts no money from any national government, so our work relies on supporters just like you.</h4>
 </div>
-	<div class="form-container">
-		<form action="/action_page.php">
-			<div class="row">
-				<div class="col-25">
-					<label for="fname">First Name</label>
-				</div>
-				<div class="col-75">
-				<input type="text" id="fname" name="firstname" placeholder="Your name...">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="lname">Last Name</label>
-				</div>
-				<div class="col-75">
-				<input type="text" id="fname" name="lastname" placeholder="Your last name...">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="email">Email</label>
-				</div>
-				<div class="col-75">
-				<input type="text" id="email" name="email" placeholder="Email address...">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="pnumber">Phone</label>
-				</div>
-				<div class="col-75">
-				<input type="text" id="pnumber" name="phone" placeholder="### ### ####...">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="donation">Donation amount ($)*</label>
-				</div>
-				<div class="col-75">
-				<input type="text" id="donation" name="donation" placeholder="">
-				</div>
-			</div>
-			<div class="row">
-      			<div class="col-25">
-        			<label for="comment">Comment regarding your donation?</label>
-      			</div>
-      		<div class="col-75">
-        		<input id="comment" name="comment" placeholder="">
-				<button id="myBtn" onclick="javascript:alert('Thank you for your donation')">Donate</button>
-			</div>
-		</form>
-	
+<div class="form-container">
+<form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="Email address...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="pnumber">Phone</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="pnumber" name="phone" placeholder="### ### ####...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="donation">Donation amount ($)*</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="donation" name="donation" placeholder="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="comment">Comment regarding your donation?</label>
+    </div>
+    <div class="col-75">
+      <input id="comment" name="comment" placeholder="">
+      <button id="myBtn" onclick="javascript:alert('Thank you for your donation')">Donate</button>
+    </div>
+  </div>
+</form>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">Survival International</div>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Join the movement by submitting your email address:
+      <input type="text" name="email">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</footer>
 <script>
 		let mainNav = document.getElementById('js-menu');
 		let navBarToggle = document.getElementById('js-navbar-toggle');
 
-		navBarToggle.addEventListener('click', function () {
+			navBarToggle.addEventListener('click', function () {
     
-    	mainNav.classList.toggle('active');
+    		mainNav.classList.toggle('active');
 		});
 	
-	var input = document.getElementById("myInput");
-	input.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("myBtn").click();
+		var input = document.getElementById("myInput");
+			input.addEventListener("keyup", function(event) {
+    		event.preventDefault();
+    	if (event.keyCode === 13) {
+        	document.getElementById("myBtn").click();
     }
 });
+	
+	function validateForm() {
+  		var x = document.forms["myForm"]["email"].value;
+  		if (x == "") {
+    		alert("Please enter your email address to join Survival International newsletter. Thank you.");
+    	return false;
+  }
+}
 	
 	</script>
 </body>
